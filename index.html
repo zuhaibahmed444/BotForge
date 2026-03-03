@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a1a2e" />
+  <meta name="description" content="Browser-native AI assistant with custom bots and workflows" />
+  <title>BotForge</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <style>
+    /* Critical path CSS — prevent flash of unstyled content */
+    body { margin: 0; }
+    #app {
+      height: 100vh;
+      height: 100dvh;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    /* Loading splash — only applies when #app is empty (before React mounts) */
+    #app:empty {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #app:empty::before { content: 'Loading BotForge...'; font-size: 16px; opacity: 0.5; }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>
